@@ -11,13 +11,5 @@ While in development, you can use the staging URL
 
 </span>
 
-To check that you are correctly reaching this service you can do
-
-**GET:**
-***``
-{url}/health
-``***
-##
-
 
 Calculator
