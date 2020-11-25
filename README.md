@@ -1,7 +1,7 @@
 # calculator-api
 
 ### What is this repository? ###
-Rector adapter for subscription of finantial products of Vida and Desgravamen SAV products, which are sold by both the Bank and CMR.
+Its an app to resolve basic matematics operations.
 
 ## Where is running?
 While in development, you can use the staging URL
