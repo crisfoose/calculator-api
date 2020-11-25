@@ -7,7 +7,7 @@ Its an app to resolve basic matematics operations.
 While in development, you can use the staging URL
 
 <span>
-*https://calculator-api/*
+*https:///api/calculator/*
 
 </span>
 
