@@ -1,12 +1,15 @@
 const resultsMocks = [
     {
-        operation1: 15
+        operation: '3x4+4-1',
+        result: 15
     },
     {
-        operation2: 10
+        operation: '1+2+3+4',
+        result: 10
     },
     {
-        operation3: 1
+        operation: '3/3+3-3',
+        result: 1
     }
 ];
 
