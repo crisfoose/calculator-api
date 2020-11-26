@@ -13,6 +13,7 @@ describe('routes - calculator', function(){
     describe('GET /results', function(){
         it('should respond with status 200', function(done){
             request.get('/api/calculator/').expect(200,done);
-        });
+        });              
     });
-})
+});
+
