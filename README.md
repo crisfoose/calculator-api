@@ -11,5 +11,10 @@ While in development, you can use the staging URL
 
 </span>
 
+## For Using you can:
+
+1- clone the repositorie
+2- 
+
 
 Calculator
