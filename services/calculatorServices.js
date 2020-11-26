@@ -10,13 +10,11 @@ class CalculatorService {
     async getResult(){
         const result = await Promise.resolve(resultsMocks[0]);
         return result || {};
-
     }
 
     async getValor(){
         const result = await Promise.resolve(basicOperations);
         return result || {};
-
     }
 
 }

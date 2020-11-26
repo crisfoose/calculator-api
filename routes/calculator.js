@@ -75,11 +75,10 @@ function calculatorApi(app){
     });
 
     router.post("/test", async function(req, res, next){
-        const { body: data } = req
-
+        const { body: operation} = req
         try{
-            
-            const operations = await calculatorService.getValor(data);
+            //const operations = await basicOperations.sumar(operation);
+            const operations = await calculatorService.getValor(operation);
 
             res.status(200).json({
                 message: 'test results',
