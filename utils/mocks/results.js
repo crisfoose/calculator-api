@@ -1,3 +1,5 @@
+const CalculatorService = require("../../services/calculatorServices");
+
 const resultsMocks = [
     {
         operation: '3x4+4-1',
@@ -13,6 +15,13 @@ const resultsMocks = [
     }
 ];
 
+class ResultServiceMock{
+    async getResults(){
+        return Promise.resolve(resultsMocks);
+    }
+}
+
 module.exports = {
-    resultsMocks
+    resultsMocks,
+    ResultServiceMock
 }
