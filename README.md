@@ -86,10 +86,92 @@ While in development, you can use the local URL
 ```
 {
     "message": "sum results",
-    "data": {
-        "operation": "5+5",
-        "result": 10
-    }
+    "data": 10
+}
+```
+### Method: 
+`POST`
+
+### URL: 
+`{BASE_URL}/subtraction`
+
+|     Parm          |  Tipe  |                          Value Expected                          |
+|:-----------------:|:------:|:----------------------------------------------------------------:|
+| BASE_URL          | String | URL of service (Development, Staging or production)              |
+|                   |        |                                                                  |
+
+
+### Where:
+
+|    Data       |     Tipe     |           Value Expected           |
+|:-------------:|:------------:|:----------------------------------:|
+| value1        |    number    | 5                                  |
+| operator      |    String    | -                                  |
+| value2        |    number    | 5                                  |
+|               |              |                                    |
+
+### Response Expected:
+```
+{
+    "message": "subtraction results",
+    "data": 0
+}
+```
+### Method: 
+`POST`
+
+### URL: 
+`{BASE_URL}/multiplication`
+
+|     Parm          |  Tipe  |                          Value Expected                          |
+|:-----------------:|:------:|:----------------------------------------------------------------:|
+| BASE_URL          | String | URL of service (Development, Staging or production)              |
+|                   |        |                                                                  |
+
+
+### Where:
+
+|    Data       |     Tipe     |           Value Expected           |
+|:-------------:|:------------:|:----------------------------------:|
+| value1        |    number    | 5                                  |
+| operator      |    String    | *                                  |
+| value2        |    number    | 5                                  |
+|               |              |                                    |
+
+### Response Expected:
+```
+{
+    "message": "multiplication results",
+    "data": 25
+}
+```
+
+### Method: 
+`POST`
+
+### URL: 
+`{BASE_URL}/division`
+
+|     Parm          |  Tipe  |                          Value Expected                          |
+|:-----------------:|:------:|:----------------------------------------------------------------:|
+| BASE_URL          | String | URL of service (Development, Staging or production)              |
+|                   |        |                                                                  |
+
+
+### Where:
+
+|    Data       |     Tipe     |           Value Expected           |
+|:-------------:|:------------:|:----------------------------------:|
+| value1        |    number    | 5                                  |
+| operator      |    String    | /                                  |
+| value2        |    number    | 5                                  |
+|               |              |                                    |
+
+### Response Expected:
+```
+{
+    "message": "division results",
+    "data": 1
 }
 ```
 
