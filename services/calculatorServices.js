@@ -15,7 +15,7 @@ class CalculatorService {
 
     async getValor(){
         const result = await Promise.resolve(basicOperations);
-        return result || [];
+        return result || {};
 
     }
 
