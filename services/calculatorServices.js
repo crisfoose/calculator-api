@@ -1,4 +1,5 @@
 const { resultsMocks } = require ('../utils/mocks/results');
+const basicOperations = require('../utils/functions/basicCalculator')
 
 class CalculatorService {
     async getResults(){
@@ -11,6 +12,13 @@ class CalculatorService {
         return result || {};
 
     }
+
+    async getValor(){
+        const result = await Promise.resolve(basicOperations);
+        return result || [];
+
+    }
+
 }
 
 module.exports = CalculatorService;
