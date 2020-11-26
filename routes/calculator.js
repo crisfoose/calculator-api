@@ -74,19 +74,6 @@ function calculatorApi(app){
         }
     });
 
-    router.post("/test", async function(req, res, next){
-        try{            
-            const operations = await calculatorService.getValor(req.body);
-
-            res.status(200).json({
-                message: 'test results',
-                data: operations
-            });
-        }catch (err){
-            next(err);
-        }
-    });
-
 }
 
 module.exports = calculatorApi;
