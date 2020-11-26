@@ -1,5 +1,6 @@
 const express = require('express');
 const CalculatorService = require('../services/calculatorServices');
+const basicOperations = require('../utils/functions/basicCalculator')
 
 
 function calculatorApi(app){
@@ -66,6 +67,20 @@ function calculatorApi(app){
 
             res.status(200).json({
                 message: 'division results',
+                data: operations
+            });
+        }catch (err){
+            next(err);
+        }
+    });
+
+    router.post("/test", async function(req, res, next){
+        const { body: operation} = req
+        try{
+            const operations = await basicOperations.sumar(operation);
+
+            res.status(200).json({
+                message: 'test results',
                 data: operations
             });
         }catch (err){
