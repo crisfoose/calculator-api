@@ -12,7 +12,7 @@ describe('routes - calculator', function(){
     const request = testServer(route);
     describe('GET /results', function(){
         it('should respond with status 200', function(done){
-            request.get('/api/calculator/').expect(200,done);
+            request.post('/api/calculator/compoundOperation').expect(200,done);
         });              
     });
 });

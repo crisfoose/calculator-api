@@ -8,12 +8,38 @@ function calculatorApi(app){
 
     const calculatorService = new CalculatorService();
 
-    router.get("/", async function(req, res, next){
+    router.post("/compoundOperation", async function(req, res, next){
+        try{
+            const operations = await calculatorService.getResults();
+
+            res.status(200).json({
+                message: 'Compound operation results',
+                data: operations
+            });
+        }catch (err){
+            next(err);
+        }
+    });
+    
+    router.post("/sum", async function(req, res, next){
         try{
             const operations = await calculatorService.getResult();
 
             res.status(200).json({
-                message: 'operation results',
+                message: 'sum results',
+                data: operations
+            });
+        }catch (err){
+            next(err);
+        }
+    });
+    
+    router.post("/subtraction", async function(req, res, next){
+        try{
+            const operations = await calculatorService.getResult();
+
+            res.status(200).json({
+                message: 'subtraction results',
                 data: operations
             });
         }catch (err){
@@ -21,18 +47,32 @@ function calculatorApi(app){
         }
     });
 
-    router.post("/", async function(req, res, next){
+    router.post("/multiplication", async function(req, res, next){
         try{
             const operations = await calculatorService.getResult();
 
             res.status(200).json({
-                message: 'operation results',
+                message: 'multiplication results',
                 data: operations
             });
         }catch (err){
             next(err);
         }
     });
+
+    router.post("/division", async function(req, res, next){
+        try{
+            const operations = await calculatorService.getResult();
+
+            res.status(200).json({
+                message: 'division results',
+                data: operations
+            });
+        }catch (err){
+            next(err);
+        }
+    });
+
 }
 
 module.exports = calculatorApi;

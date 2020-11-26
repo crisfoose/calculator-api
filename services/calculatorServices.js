@@ -7,7 +7,7 @@ class CalculatorService {
     }
 
     async getResult(){
-        const result = await Promise.resolve(resultsMocks);
+        const result = await Promise.resolve(resultsMocks[0]);
         return result || {};
 
     }
