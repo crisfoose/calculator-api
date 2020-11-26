@@ -1,5 +1,5 @@
 const { resultsMocks } = require ('../utils/mocks/results');
-const basicOperations = require('../utils/functions/basicCalculator')
+const basicCalculator = require('../utils/functions/basicCalculator')
 
 class CalculatorService {
     async getResults(){
@@ -12,8 +12,23 @@ class CalculatorService {
         return result || {};
     }
 
-    async getValor(){
-        const result = await Promise.resolve(basicOperations);
+    async getValorSum(array){
+        const result = await Promise.resolve(basicCalculator.sum(array));
+        return result || {};
+    }
+
+    async getValorRes(array){
+        const result = await Promise.resolve(basicCalculator.subtraction(array));
+        return result || {};
+    }
+
+    async getValorMult(array){
+        const result = await Promise.resolve(basicCalculator.multiplication(array));
+        return result || {};
+    }
+
+    async getValorDiv(array){
+        const result = await Promise.resolve(basicCalculator.division(array));
         return result || {};
     }
 

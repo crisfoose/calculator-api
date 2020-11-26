@@ -1,18 +1,22 @@
-var basicOperations = {
+var basicCalculator = {
 
-    sum: function sum(){        
-        return(parseInt(arguments[0])+parseInt(arguments[2]));
+    sum: function sum(array){
+        console.log(array);        
+        return(array.value1+array.value2);
     },
-    subtraction: function subtraction(){
-        return(parseInt(arguments[0])-parseInt(arguments[2]));
+    subtraction: function subtraction(array){
+        console.log(array);        
+        return(array.value1-array.value2);
     },
-    multiplication: function multiplication(){
-        return(parseInt(arguments[0])*parseInt(arguments[2]));
+    multiplication: function multiplication(array){
+        console.log(array);        
+        return(array.value1*array.value2);
     },
-    division: function division(){
-        return(parseInt(arguments[0])/parseInt(arguments[2]));
+    division: function division(array){
+        console.log(array);        
+        return(array.value1/array.value2);
     }
 
 }
 
-module.exports = basicOperations;
+module.exports = basicCalculator;

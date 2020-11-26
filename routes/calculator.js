@@ -1,6 +1,6 @@
 const express = require('express');
 const CalculatorService = require('../services/calculatorServices');
-const basicOperations = require('../utils/functions/basicCalculator')
+const basicCalculator = require('../utils/functions/basicCalculator')
 
 
 function calculatorApi(app){
@@ -24,7 +24,7 @@ function calculatorApi(app){
     
     router.post("/sum", async function(req, res, next){
         try{
-            const operations = await calculatorService.getResult();
+            const operations = await calculatorService.getValorSum(req.body);
 
             res.status(200).json({
                 message: 'sum results',
@@ -37,7 +37,7 @@ function calculatorApi(app){
     
     router.post("/subtraction", async function(req, res, next){
         try{
-            const operations = await calculatorService.getResult();
+            const operations = await calculatorService.getValorRes(req.body);
 
             res.status(200).json({
                 message: 'subtraction results',
@@ -50,7 +50,7 @@ function calculatorApi(app){
 
     router.post("/multiplication", async function(req, res, next){
         try{
-            const operations = await calculatorService.getResult();
+            const operations = await calculatorService.getValorMult(req.body);
 
             res.status(200).json({
                 message: 'multiplication results',
@@ -63,7 +63,7 @@ function calculatorApi(app){
 
     router.post("/division", async function(req, res, next){
         try{
-            const operations = await calculatorService.getResult();
+            const operations = await calculatorService.getValorDiv(req.body);
 
             res.status(200).json({
                 message: 'division results',
@@ -75,10 +75,8 @@ function calculatorApi(app){
     });
 
     router.post("/test", async function(req, res, next){
-        const { body: operation} = req
-        try{
-            //const operations = await basicOperations.sumar(operation);
-            const operations = await calculatorService.getValor(operation);
+        try{            
+            const operations = await calculatorService.getValor(req.body);
 
             res.status(200).json({
                 message: 'test results',
